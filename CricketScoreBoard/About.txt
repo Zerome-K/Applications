@@ -1,0 +1,64 @@
+-----------CRICKET GAME--------------
+
+ClASSES  :  Player, Team, Ground, Main
+
+Gaming Process : 1. Get a Number from the User,
+
+		 2. Used Random class it gives a random number between 0 -6;
+		
+		 3. if(User Given number  == Computer Number)
+
+			-> Declares Out;
+
+			-> Increase Wicket count;
+
+		 4. Repeating the process until Balls finished or 11 Wickets are taken,
+
+		 5. Then we Chase or Defend the Oppenent team,
+
+		 6. After the Match finished Compare Runs and Declare the WINNERS.
+
+
+Class Definitions:
+
+		
+	1. Player Class{
+		
+		-> Player Object has an player name and Position; and we can add Option variable like total sixes,fours,runs etc.
+		-> This is a CLass for Creating player.
+	}
+
+	2. Team Class{
+
+		-> In Team class, I already defined a Three teams,
+
+		-> Also an Option for Creating a New Team,
+
+		-> Team class is for Creating or Using Already Implemented Teams,
+		
+		-> Team Object has an Array of Player Objects. 
+
+	}
+
+	3. Ground Class{
+		
+		-> Ground Class is the main class all the playing activities are happen,
+		
+		-> In Ground Class , a method called Play it handles the game,
+
+		-> When Ground Object is Invoked Overs also declared, through this it creating a nested array for user and Computer to Store evry Balls, Rund, Wickets,
+
+		-> Each and Every Over a ScoreCard will appered and gives the Over Summary,
+
+		-> After Completing Batting And Bowling checks the total runs of the User and Computer , Whoever gains More runs will be declared as a Winner,
+
+		-> After Game Complition , an option include that displays the Over all MAtch Summary.
+	}
+
+	4. Main CLass{
+		
+		-> Main class Runs the GAME
+	}
+
+
+	}
