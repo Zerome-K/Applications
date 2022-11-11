@@ -1,4 +1,4 @@
-## Thirukkural Application
+   # Thirukkural Application
 
    -> Thirukkural Application is a console project working with Thirukkural, the project holds useful usecases for the user.
    
