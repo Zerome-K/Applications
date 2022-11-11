@@ -2,12 +2,12 @@
 
    -> Thirukkural Application is a console project working with Thirukkural, the project holds useful usecases for the user.
    
-   -> Application have features like 
+   # Application have features like 
    - searching by kural, 
-                  -  search by topic, 
-                  -  search by chapter,
-                  -  search by Word,
-                  -  and a Thirukkural Game
+   -  search by topic, 
+   -  search by chapter,
+   -  search by Word,
+   -  and a Thirukkural Game
                   
    -> The Game feature have the following workflow,
                   -> the program is setting by choose a single kural by random
