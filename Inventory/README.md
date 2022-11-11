@@ -20,9 +20,9 @@ USECASES
 
 ## WORK FLOW
 
--The View package holds the interaction between user and app in package handling,stock handling, records handling
--Model holds the inventory properties like  admin, customer, product.
--Overall, controller mantains the all the business logic of inventory management some classes are -StockController,TradeController,RevenueController,CustomerController etc...
+- The View package holds the interaction between user and app in package handling,stock handling, records handling
+- Model holds the inventory properties like  admin, customer, product.
+- Overall, controller mantains the all the business logic of inventory management some classes are -StockController,TradeController,RevenueController,CustomerController etc...
 
 - Application maintains Customer data, Stock data, Purchase data, Selling data , admin and revenue this helps lot for user to track overall Data.
 
