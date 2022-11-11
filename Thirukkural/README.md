@@ -3,7 +3,7 @@
    -> Thirukkural Application is a console project working with Thirukkural, the project holds useful usecases for the user.
    
    -> Application have features like 
-                  -  searching by kural, 
+                  - searching by kural, 
                   -  search by topic, 
                   -  search by chapter,
                   -  search by Word,
