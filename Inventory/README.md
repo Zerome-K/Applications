@@ -5,8 +5,9 @@
 - The Application manages and organize the Data in MYSQL database management with relational tables and achieve normalisation.
 - Application holds the MVC-Model/Controll/View pattern to achieve standardized format of building, by this we can achieve a precise structure.
 - The overall performance of the application maintains the inventory with ease and be scalable for further features.
+USECASES
 
-##USECASES
+## USECASES
 
 - A dashboard to navigate the user between the inventory process without any interruption. DashBoard has a quick review of TotalStocks, Total revenue, Package status like Shipped,Delivered, low Stock counts etc.
 - User can add, remove, update a product or Stock, the stocks are maintain in Database.
@@ -17,7 +18,7 @@
 - Customer Datas are maintained and organized,.This helps user to track customer details and can add, delete, updata customer data.
 - Maintains a admin management for security and accessing purpose.
 
-##WORK_FLOW
+## WORK FLOW
 
 -The View package holds the interaction between user and app in package handling,stock handling, records handling
 -Model holds the inventory properties like  admin, customer, product.
