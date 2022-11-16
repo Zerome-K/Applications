@@ -8,7 +8,7 @@
 
 ## USE CASES COVERED
 
-  #### Search Kural by Order
+  ### Search Kural by Order
    - By this feture we can retrive a kural by its order,
   ### Search by word
    - if you want thirukkural which contains particular word, this is one is more suitable , which fetch the kural which contains the word you present.
@@ -21,9 +21,9 @@
 
 ## CLASSES & PACKAGES
   
-  -> POJO's              : Root, Kural
-  -> Controller Classes  : Main Controller
-  -> View Classes        : Main View
+  - POJO's              : Root, Kural
+  - Controller Classes  : Main Controller
+  - View Classes        : Main View
       
 Technology Used
 - JAVA
