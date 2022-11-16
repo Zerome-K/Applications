@@ -8,12 +8,9 @@ import java.util.Scanner;
 
 public class Admin {
     HashMap<String, ParkerDetail> data = new HashMap<>();
-
     int totalSlots = 18, usedSlots = 0, freeSlots = 18;
-
     double revenue = 0.0;
     Floor floor;
-
     Admin() {
         floor = new Floor();
     }
