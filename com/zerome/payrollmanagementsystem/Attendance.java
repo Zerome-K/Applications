@@ -1,6 +1,5 @@
 package employee_payroll;
 
-
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -16,34 +15,21 @@ public class Attendance {
         }
 
         public void register(ArrayList<Employee> employee) {
-
+                
                 LocalDateTime myDateObj = LocalDateTime.now();
                 DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
                 String formattedDate = myDateObj.format(myFormatObj);
-
                 File f = new File("C:\\Users\\Zerome\\IdeaProjects\\MiniProjects\\src\\employee_payroll\\Attendance\\" + formattedDate + ".txt");
-
-
                 try {
-
                         boolean flag = f.createNewFile();
-
                         if(flag) {
-
                                 System.out.println("-=-=-=-=- ATTENDANCE -=-=-=-=");
-
                                 System.out.println("\nPRESS [P-PRESENT or A-ABSENT]");
-
                                 FileWriter writer = new FileWriter(f);
-
                                 for (Employee X : employee) {
-
                                         System.out.print("\nNAME - " + X.name + " | ID - " + X.id + " : ");
-
                                         while(true) {
-
                                                 String status = input.next().toUpperCase();
-
                                                 if (status.equals("P") || status.equals("A")) {
                                                         if(status.equals("P"))X.presence++;
                                                         X.days++;
@@ -53,23 +39,18 @@ public class Attendance {
                                                 } else System.out.print("\nENTER P/A : ");
                                         }
                                 }
-
                                 writer.close();
-
                         } else System.out.print("\n=-=-=-= ATTENDANCE TAKEN =-=-=-=");
-
                 } catch (FileNotFoundException e) {
                         System.out.println("register");
                 } catch (IOException e){
                         System.out.println("register 1");
                 }
-
         }
-
+        
         public void sheet() {
 
                 File folder = new File("C:\\Users\\Zerome\\IdeaProjects\\MiniProjects\\src\\employee_payroll\\Attendance");
-
                 String[] contents = folder.list();
                 System.out.print("=-=-=- AVAILABLE DATES -=-=-");
                 assert contents != null;
