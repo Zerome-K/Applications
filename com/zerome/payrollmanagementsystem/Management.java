@@ -45,7 +45,6 @@ public class Management {
 
         System.out.print("\nENTER OPTION : ");
         int option  = in.nextInt();
-
         if(option == 7) {
             try {
                 ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(
@@ -57,12 +56,10 @@ public class Management {
             return;
         }
         this.execution(option);
-
         dashboard();
     }
-
+                           
     private void execution(int option) {
-
         switch (option) {
             case 1 -> this.add();
             case 2 -> this.attendance();
@@ -78,7 +75,6 @@ public class Management {
     }
 
     public void add(){
-
         Employee employee1 = new Employee();
         this.employeeData.add(employee1);
         try {
@@ -92,9 +88,7 @@ public class Management {
     }
 
     private void employessDetails() {
-
         System.out.println("\nACTIVE EMPLOYEES : " + this.employeeData.size());
-
         while (true) {
             System.out.println("""
                     \n-=-=-=-= SELECT OPTION -=-=-=-=
@@ -102,7 +96,6 @@ public class Management {
                         -> 2. SEARCH EMPLOYEE
                         -> 3. MAIN MENU
                     -=-=-=-=-=-=-=-=-=-=-=--=-=-=-=""");
-
             System.out.print("\nCHOOSE OPTION : ");
             int option = in.nextInt();
             if (option == 1) {
@@ -113,7 +106,6 @@ public class Management {
                     System.out.println("|" + centerString(18, String.valueOf(X.id)) + " | " + centerString(18, X.name) + " | " + centerString(22, X.designation) + "|");
                 }
                 System.out.println("------------------------------------------------------------------");
-
             } else if (option == 2) {
                 System.out.print("ENTER 4 DIGIT EMPLOYEE ID : ");
                 String id = in.next();
@@ -131,26 +123,23 @@ public class Management {
             else System.out.println("ENTER VALID OPTION : ");
         }
     }
+                               
     private void attendance() {
         attendance.register(this.employeeData);
     }
+                               
     public void payRoll() {
 
         ArrayList<Employee> salarydet = (ArrayList<Employee>) employeeData.clone();
-
         double[] wageses = wagesAllocation();
-
         for (Employee salary : salarydet) {
-
             double i;
-
             switch (salary.designation) {
                 case "DEVELOPER" -> i = wageses[0];
                 case "DESIGNER" -> i = wageses[1];
                 case "QUALITY ANALYSIS" -> i = wageses[2];
                 default -> i = wageses[3];
             }
-
             salary.grosspay = i * salary.presence;
             salary.netpay = (salary.grosspay * wageses[4]) / 100;
             salary.taxes = wageses[4];
@@ -170,38 +159,27 @@ public class Management {
     }
 
     private double[] wagesAllocation(){
-
         double[] wages = new  double[5];
-
         int i = 1;
-
         System.out.print("=-=-=-=-=- SALARY ALLOCATION -=-=-=-=-=");
-
         while(i ==1) {
-
             try {
                 System.out.print("\n -> DEVELOPERS WAGES PER DAY       : ");
                 double dev = in.nextDouble();
                 wages[0] = dev;
-
                 System.out.print("\n -> DESIGNERS WAGES PER DAY        : ");
                 double des = in.nextDouble();
                 wages[1] = des;
-
                 System.out.print("\n -> NETWORK ARCHITECT WAGES PER DAY : ");
                 double qa = in.nextDouble();
                 wages[2] = qa;
-
                 System.out.print("\n -> TESTER WAGES PER DAY            : ");
                 double tt = in.nextDouble();
                 wages[3] = tt;
-
                 System.out.print("\nTAX DEDUCTION % : ");
                 double tax = in.nextDouble();
                 wages[4] = tax;
-
                 i = 0;
-
             } catch (InputMismatchException e) {
                 System.out.println("\n=-=-=- ENTER VALID AMOUNT -=-=-=");
                 in.next();
@@ -215,7 +193,6 @@ public class Management {
     }
 
 private void records(){
-
     File folder = new File("C:\\Users\\Zerome\\IdeaProjects\\MiniProjects\\src\\employee_payroll\\Payroll");
     String[] contents = folder.list();
     if(contents == null) {
